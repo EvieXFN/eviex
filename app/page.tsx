@@ -50,10 +50,6 @@ export default function Home() {
           Fortnite Creator
         </p>
 
-        <h2 style={{ fontSize: "56px", marginBottom: "16px" }}>
-          EvieX
-        </h2>
-
         <p style={{ opacity: 0.8, marginBottom: "24px" }}>
           Clips • Customs • UEFN Maps • Creator Code
         </p>
