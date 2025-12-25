@@ -51,7 +51,7 @@ export default function Home() {
         </p>
 
         <p style={{ opacity: 0.8, marginBottom: "24px" }}>
-          Clips • Customs • UEFN Maps • Creator Code
+        Clips • Customs • Content creator
         </p>
 
         <a
