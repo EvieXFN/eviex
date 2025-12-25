@@ -1,117 +1,120 @@
 export default function Home() {
   return (
-    <main style={styles.page}>
-      {/* Neon glow background */}
-      <div style={styles.glowLeft} />
-      <div style={styles.glowRight} />
+    <div style={page}>
+      <div style={glowBlue} />
+      <div style={glowPurple} />
 
-      {/* Header */}
-      <header style={styles.header}>
-        <div style={styles.logo}>EvieX</div>
-        <div style={styles.subtitle}>Fortnite Creator</div>
+      <header style={header}>
+        <h1 style={logo}>EvieX</h1>
+        <span style={subtitle}>Fortnite Creator</span>
       </header>
 
-      {/* Hero */}
-      <section style={styles.hero}>
-        <h1 style={styles.title}>
-          EvieX <span style={styles.neon}>NEON HUB</span>
-        </h1>
+      <main style={hero}>
+        <h2 style={title}>
+          EvieX <span style={neon}>NEON HUB</span>
+        </h2>
 
-        <p style={styles.description}>
+        <p style={text}>
           Clips • Customs • UEFN Maps • Creator Code
         </p>
 
-        <div style={styles.buttonRow}>
-          <a href="#" style={styles.neonButton}>
+        <div style={buttons}>
+          <a style={button} href="#">
             YouTube
           </a>
-
-          <a href="#" style={styles.neonButton}>
+          <a style={button} href="#">
             Twitch
           </a>
-
           <a
+            style={button}
             href="https://discord.gg/ZzurZUDHPR"
             target="_blank"
             rel="noopener noreferrer"
-            style={styles.neonButton}
           >
             Discord
           </a>
         </div>
-      </section>
 
-      {/* Island Codes */}
-      <section style={styles.section}>
-        <h2 style={styles.sectionTitle}>ISLAND CODES</h2>
+        <section style={section}>
+          <h3 style={sectionTitle}>SUPPORT A CREATOR</h3>
+          <p style={creator}>
+            Use code <span style={neon}>EvieX</span>
+          </p>
+        </section>
+      </main>
 
-        <div style={styles.card}>
-          🏝 Beach 1v1 — <strong>0000-0000-0000</strong>
-        </div>
-        <div style={styles.card}>
-          📦 Box Fights — <strong>0000-0000-0000</strong>
-        </div>
-        <div style={styles.card}>
-          🌪 Zone Wars — <strong>0000-0000-0000</strong>
-        </div>
-      </section>
-
-      {/* Creator Code */}
-      <section style={styles.section}>
-        <h2 style={styles.sectionTitle}>SUPPORT A CREATOR</h2>
-        <div style={styles.creatorCode}>
-          USE CODE <span style={styles.neon}>EvieX</span>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer style={styles.footer}>
-        © {new Date().getFullYear()} EvieX • Fortnite
+      <footer style={footer}>
+        © {new Date().getFullYear()} EvieX
       </footer>
-    </main>
+    </div>
   );
 }
 
-/* ───────── STYLES ───────── */
+/* ---------- styles ---------- */
 
-const styles: { [key: string]: React.CSSProperties } = {
-  page: {
-    minHeight: "100vh",
-    background: "#05060a",
-    color: "white",
-    padding: "40px",
-    position: "relative",
-    overflow: "hidden",
-    fontFamily: "Arial, sans-serif",
-  },
+const page = {
+  minHeight: "100vh",
+  background: "#05060a",
+  color: "white",
+  padding: "40px",
+  fontFamily: "Arial, sans-serif",
+  position: "relative",
+  overflow: "hidden",
+};
 
-  glowLeft: {
-    position: "absolute",
-    top: "-200px",
-    left: "-200px",
-    width: "500px",
-    height: "500px",
-    background: "radial-gradient(circle, #00f0ff55, transparent 60%)",
-    filter: "blur(90px)",
-  },
+const glowBlue = {
+  position: "absolute",
+  top: "-200px",
+  left: "-200px",
+  width: "500px",
+  height: "500px",
+  background: "radial-gradient(circle, #00f0ff55, transparent 60%)",
+  filter: "blur(90px)",
+};
 
-  glowRight: {
-    position: "absolute",
-    bottom: "-200px",
-    right: "-200px",
-    width: "500px",
-    height: "500px",
-    background: "radial-gradient(circle, #b400ff55, transparent 60%)",
-    filter: "blur(90px)",
-  },
+const glowPurple = {
+  position: "absolute",
+  bottom: "-200px",
+  right: "-200px",
+  width: "500px",
+  height: "500px",
+  background: "radial-gradient(circle, #b400ff55, transparent 60%)",
+  filter: "blur(90px)",
+};
 
-  header: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    zIndex: 1,
-    position: "relative",
-  },
+const header = {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+};
 
-  logo: {
-    fo
+const logo = {
+  fontSize: "30px",
+  fontWeight: "900",
+  color: "#00f0ff",
+  textShadow: "0 0 15px #00f0ff",
+};
+
+const subtitle = {
+  fontSize: "14px",
+  color: "#aaa",
+};
+
+const hero = {
+  marginTop: "120px",
+  maxWidth: "700px",
+};
+
+const title = {
+  fontSize: "56px",
+  fontWeight: "900",
+};
+
+const neon = {
+  color: "#b400ff",
+  textShadow: "0 0 12px #b400ff, 0 0 30px #b400ff",
+};
+
+const text = {
+  marginTop: "16px",
+  fontSiz
