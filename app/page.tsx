@@ -1,70 +1,88 @@
 export default function Home() {
   return (
-    <div
+    <main
       style={{
         minHeight: "100vh",
-        background: "#05060a",
-        color: "white",
-        padding: "40px",
+        background: "radial-gradient(circle at top, #0a0a0a, #000000)",
+        color: "#ffffff",
+        padding: "60px",
         fontFamily: "Arial, sans-serif",
       }}
     >
       {/* Header */}
-      <h1
-        style={{
-          fontSize: "36px",
-          fontWeight: "900",
-          color: "#00f0ff",
-          textShadow: "0 0 12px #00f0ff",
-        }}
-      >
-        EvieX
-      </h1>
+      <div>
+        <h1
+          style={{
+            color: "#00f6ff",
+            fontSize: "32px",
+            fontWeight: "900",
+            marginBottom: "6px",
+            textShadow: "0 0 12px rgba(0,246,255,0.6)",
+          }}
+        >
+          EvieX
+        </h1>
 
-      <p style={{ color: "#aaa", marginTop: "4px" }}>
-        Fortnite Creator
-      </p>
+        <p style={{ color: "#bdbdbd", fontSize: "14px" }}>
+          Fortnite Creator
+        </p>
+      </div>
 
-      {/* Hero */}
+      {/* Main Title */}
       <h2
         style={{
           marginTop: "80px",
-          fontSize: "48px",
+          fontSize: "56px",
           fontWeight: "900",
+          letterSpacing: "1px",
         }}
       >
-        EvieX <span style={{ color: "#b400ff" }}>NEON HUB</span>
+        EvieX
       </h2>
 
-      <p style={{ marginTop: "16px", color: "#bdbdbd" }}>
+      <p
+        style={{
+          marginTop: "12px",
+          color: "#cfcfcf",
+          fontSize: "16px",
+        }}
+      >
         Clips • Customs • UEFN Maps • Creator Code
       </p>
 
-      {/* Buttons */}
-      <div style={{ marginTop: "32px", display: "flex", gap: "16px" }}>
-        <a
-          href="https://discord.gg/ZzurZUDHPR"
-          target="_blank"
-          rel="noopener noreferrer"
+      {/* Discord Button */}
+      <a
+        href="https://discord.gg/ZzurZUDHPR"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-block",
+          marginTop: "30px",
+          padding: "12px 26px",
+          borderRadius: "10px",
+          border: "2px solid #00f6ff",
+          color: "#00f6ff",
+          textDecoration: "none",
+          fontWeight: "700",
+          boxShadow: "0 0 15px rgba(0,246,255,0.4)",
+        }}
+      >
+        Discord
+      </a>
+
+      {/* Support A Creator */}
+      <div style={{ marginTop: "50px" }}>
+        <p
           style={{
-            padding: "14px 22px",
-            border: "2px solid #00f0ff",
-            borderRadius: "10px",
-            color: "#00f0ff",
-            textDecoration: "none",
-            fontWeight: "bold",
+            color: "#00f6ff",
+            fontWeight: "700",
+            marginBottom: "6px",
           }}
         >
-          Discord
-        </a>
-      </div>
-
-      {/* Support a Creator */}
-      <div style={{ marginTop: "80px" }}>
-        <h3 style={{ color: "#00f0ff", fontSize: "22px" }}>
           Support-A-Creator
-        </h3>
-        <p style={{ fontSize: "22px", marginTop: "8px" }}>
+        </p>
+
+        <p style={{ fontSize: "18px" }}>
           Use code <strong>EvieX</strong>
         </p>
       </div>
@@ -72,14 +90,15 @@ export default function Home() {
       {/* Footer */}
       <footer
         style={{
-          marginTop: "120px",
+          position: "absolute",
+          bottom: "20px",
+          left: "60px",
+          color: "#666",
           fontSize: "12px",
-          color: "#777",
         }}
       >
         © 2025 EvieX • Fortnite
       </footer>
-    </div>
+    </main>
   );
 }
-
