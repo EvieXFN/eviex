@@ -8,16 +8,16 @@ export default function Home() {
       {/* Top Nav */}
       <header className="top">
         <div className="topLeft">
-          <div className="logoMark" aria-hidden />
+          <div className="logoMark" />
           <div className="brandBlock">
             <div className="brandName">EvieX</div>
             <div className="brandTag">Fortnite Creator</div>
           </div>
         </div>
 
-        <nav className="tabs" aria-label="Primary">
+        <nav className="tabs">
           <a className="tab" href="#discover">Discover</a>
-          <a className="tab" href="#content">Content</a>
+          <a className="tab" href="#videos">Videos</a>
           <a className="tab" href="#maps">UEFN Maps</a>
           <a className="tab" href="#code">Creator Code</a>
           <a
@@ -35,7 +35,6 @@ export default function Home() {
       <section className="hero" id="discover">
         <div className="heroInner">
           <h1 className="title">EvieX</h1>
-
           <p className="subtitle">
             Clips • UEFN Maps • Community • Support-A-Creator
           </p>
@@ -49,24 +48,20 @@ export default function Home() {
             >
               Join Discord
             </a>
-
-            <a className="btn btnGhost" href="#content">
-              View Content
+            <a className="btn btnGhost" href="#videos">
+              Watch Videos
             </a>
-
             <a className="btn btnSoft" href="#code">
               Use Code EvieX
             </a>
           </div>
         </div>
 
-        {/* Right-side feature card */}
         <aside className="feature">
           <div className="featureTitle">EvieX Community</div>
           <div className="featureText">
-            Announcements, updates, and links—everything in one place.
+            Fortnite content, updates, and links — all in one place.
           </div>
-
           <a
             className="btn btnPrimary"
             href={DISCORD_URL}
@@ -79,61 +74,73 @@ export default function Home() {
         </aside>
       </section>
 
-      {/* Content Tiles */}
-      <section className="grid" id="content">
+      {/* Videos */}
+      <section className="grid" id="videos">
         <header className="sectionHead">
-          <h2 className="h2">Discover</h2>
-          <p className="p">Quick links to your main sections.</p>
+          <h2 className="h2">Latest Videos</h2>
+          <p className="p">Recent uploads and highlights</p>
         </header>
 
-        <div className="tiles">
-          <article className="tile">
-            <div className="tileMedia" />
-            <div className="tileBody">
-              <div className="tileTitle">Clips & Highlights</div>
-              <div className="tileText">Best moments, edits, and wins.</div>
-              <a className="tileBtn" href="#content">View</a>
-            </div>
-          </article>
+        <div
+          style={{
+            display: "grid",
+            gap: "16px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            marginTop: "12px",
+          }}
+        >
+          <iframe
+            src="https://www.youtube.com/embed/Uqcl4ZkJ594"
+            title="EvieX Video 1"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{
+              width: "100%",
+              aspectRatio: "16 / 9",
+              borderRadius: "14px",
+              border: "1px solid rgba(255,255,255,0.12)",
+            }}
+          />
 
-          <article className="tile" id="maps">
-            <div className="tileMedia" />
-            <div className="tileBody">
-              <div className="tileTitle">UEFN Maps</div>
-              <div className="tileText">New islands + updates.</div>
-              <a className="tileBtn" href="#maps">Explore</a>
-            </div>
-          </article>
+          <iframe
+            src="https://www.youtube.com/embed/tiFdaaiev04"
+            title="EvieX Video 2"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{
+              width: "100%",
+              aspectRatio: "16 / 9",
+              borderRadius: "14px",
+              border: "1px solid rgba(255,255,255,0.12)",
+            }}
+          />
 
-          <article className="tile">
-            <div className="tileMedia" />
-            <div className="tileBody">
-              <div className="tileTitle">Join the Community</div>
-              <div className="tileText">Get announcements and updates.</div>
-              <a
-                className="tileBtn"
-                href={DISCORD_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Join
-              </a>
-            </div>
-          </article>
+          <iframe
+            src="https://www.youtube.com/embed/pHH3xiNarus"
+            title="EvieX Video 3"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{
+              width: "100%",
+              aspectRatio: "16 / 9",
+              borderRadius: "14px",
+              border: "1px solid rgba(255,255,255,0.12)",
+            }}
+          />
         </div>
       </section>
 
       {/* Creator Code */}
       <section className="panel" id="code">
         <div className="panelInner">
-          <div className="panelLeft">
+          <div>
             <h2 className="h2">Support-A-Creator</h2>
             <p className="p">
               Use code <strong>EvieX</strong> in the Fortnite Item Shop.
             </p>
           </div>
 
-          <div className="codeBox" aria-label="Creator Code">
+          <div className="codeBox">
             <div className="codeValue">EvieX</div>
             <CopyButton />
           </div>
