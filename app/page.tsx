@@ -33,22 +33,11 @@ export default function Home() {
 
       {/* Hero */}
       <section className="hero" id="discover">
-        <div className="heroGrid" aria-hidden />
-        <div className="heroGlow" aria-hidden />
-
         <div className="heroInner">
-          <div className="badgeRow">
-            <span className="badge badgeCyan">LIVE UPDATES</span>
-            <span className="badge badgePurple">CREATOR</span>
-            <span className="badge badgeGold">FEATURED</span>
-          </div>
-
-          <h1 className="title">
-            EVieX <span className="titleAccent">HQ</span>
-          </h1>
+          <h1 className="title">EvieX</h1>
 
           <p className="subtitle">
-            Clips • Customs • UEFN Maps • Community • Support-A-Creator
+            Clips • UEFN Maps • Community • Support-A-Creator
           </p>
 
           <div className="ctaRow">
@@ -58,7 +47,6 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="btnIcon" aria-hidden>⬢</span>
               Join Discord
             </a>
 
@@ -70,84 +58,58 @@ export default function Home() {
               Use Code EvieX
             </a>
           </div>
-
-          <div className="miniStats">
-            <div className="stat">
-              <div className="statTop">Region</div>
-              <div className="statVal">NA</div>
-            </div>
-            <div className="stat">
-              <div className="statTop">Mode</div>
-              <div className="statVal">Battle Royale</div>
-            </div>
-            <div className="stat">
-              <div className="statTop">Focus</div>
-              <div className="statVal">UEFN + Customs</div>
-            </div>
-          </div>
         </div>
 
         {/* Right-side feature card */}
         <aside className="feature">
-          <div className="featureTop">
-            <div className="chip">FEATURED</div>
-            <div className="chip chipAlt">UPDATED</div>
-          </div>
-
-          <div className="featureTitle">Community Customs</div>
+          <div className="featureTitle">EvieX Community</div>
           <div className="featureText">
-            Queue + rules live in Discord. Join to get notified.
+            Announcements, updates, and links—everything in one place.
           </div>
 
           <a
-            className="btn btnPrimary btnFull"
+            className="btn btnPrimary"
             href={DISCORD_URL}
             target="_blank"
             rel="noopener noreferrer"
+            style={{ width: "100%" }}
           >
             Open Discord
           </a>
-
-          <div className="featureFoot">
-            <div className="dot" /> Fast join • Mobile-friendly
-          </div>
         </aside>
       </section>
 
-      {/* Discover Cards */}
+      {/* Content Tiles */}
       <section className="grid" id="content">
         <header className="sectionHead">
           <h2 className="h2">Discover</h2>
-          <p className="p">Fortnite-style tiles for your main sections.</p>
+          <p className="p">Quick links to your main sections.</p>
         </header>
 
         <div className="tiles">
-          <article className="tile rarityCyan">
-            <div className="tileMedia tileMedia1" />
+          <article className="tile">
+            <div className="tileMedia" />
             <div className="tileBody">
-              <div className="tileKicker">CONTENT</div>
               <div className="tileTitle">Clips & Highlights</div>
               <div className="tileText">Best moments, edits, and wins.</div>
               <a className="tileBtn" href="#content">View</a>
             </div>
           </article>
 
-          <article className="tile rarityPurple" id="maps">
-            <div className="tileMedia tileMedia2" />
+          <article className="tile" id="maps">
+            <div className="tileMedia" />
             <div className="tileBody">
-              <div className="tileKicker">UEFN</div>
-              <div className="tileTitle">Maps & Updates</div>
-              <div className="tileText">New islands + change logs.</div>
+              <div className="tileTitle">UEFN Maps</div>
+              <div className="tileText">New islands + updates.</div>
               <a className="tileBtn" href="#maps">Explore</a>
             </div>
           </article>
 
-          <article className="tile rarityGold">
-            <div className="tileMedia tileMedia3" />
+          <article className="tile">
+            <div className="tileMedia" />
             <div className="tileBody">
-              <div className="tileKicker">COMMUNITY</div>
-              <div className="tileTitle">Customs Queue</div>
-              <div className="tileText">Join the server to get in.</div>
+              <div className="tileTitle">Join the Community</div>
+              <div className="tileText">Get announcements and updates.</div>
               <a
                 className="tileBtn"
                 href={DISCORD_URL}
@@ -161,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Creator Code Panel */}
+      {/* Creator Code */}
       <section className="panel" id="code">
         <div className="panelInner">
           <div className="panelLeft">
@@ -172,7 +134,6 @@ export default function Home() {
           </div>
 
           <div className="codeBox" aria-label="Creator Code">
-            <div className="codeLabel">CREATOR CODE</div>
             <div className="codeValue">EvieX</div>
             <CopyButton />
           </div>
