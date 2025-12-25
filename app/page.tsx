@@ -65,3 +65,12 @@ export default function Home() {
     </div>
   );
 }
+      <footer
+        style={{
+          marginTop: "120px",
+          fontSize: "12px",
+          color: "#777",
+        }}
+      >
+        © 2025 EvieX • Fortnite
+      </footer>
