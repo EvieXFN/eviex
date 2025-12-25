@@ -2,100 +2,194 @@ const DISCORD_URL = "https://discord.gg/ZzurZUDHPR";
 
 export default function Home() {
   return (
-    <main className="site">
+    <main className="wrap">
       {/* Top Nav */}
-      <header className="topbar">
-        <div className="brand">
-          <div className="brandDot" />
-          <span className="brandText">EvieX</span>
+      <header className="top">
+        <div className="topLeft">
+          <div className="logoMark" aria-hidden />
+          <div className="brandBlock">
+            <div className="brandName">EvieX</div>
+            <div className="brandTag">Fortnite Creator</div>
+          </div>
         </div>
 
-        <nav className="nav">
-          <a href="#clips">Clips</a>
-          <a href="#customs">Customs</a>
-          <a href="#uefn">UEFN Maps</a>
-          <a href="#code">Creator Code</a>
-          <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
+        <nav className="tabs" aria-label="Primary">
+          <a className="tab" href="#discover">Discover</a>
+          <a className="tab" href="#content">Content</a>
+          <a className="tab" href="#maps">UEFN Maps</a>
+          <a className="tab" href="#code">Creator Code</a>
+          <a
+            className="tab tabAccent"
+            href={DISCORD_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Discord
           </a>
         </nav>
       </header>
 
       {/* Hero */}
-      <section className="hero">
-        <div className="heroOverlay" />
+      <section className="hero" id="discover">
+        <div className="heroGrid" aria-hidden />
+        <div className="heroGlow" aria-hidden />
 
         <div className="heroInner">
-          <p className="kicker">FORTNITE CREATOR</p>
-  
-          <p className="heroSub">
-            Clips • Customs • UEFN Maps • Support-A-Creator
+          <div className="badgeRow">
+            <span className="badge badgeCyan">LIVE UPDATES</span>
+            <span className="badge badgePurple">CREATOR</span>
+            <span className="badge badgeGold">FEATURED</span>
+          </div>
+
+          <h1 className="title">
+            EVieX <span className="titleAccent">HUB</span>
+          </h1>
+
+          <p className="subtitle">
+            Clips • Customs • UEFN Maps • Community • Support-A-Creator
           </p>
 
-          <div className="heroButtons">
+          <div className="ctaRow">
             <a
-              className="btnPrimary"
+              className="btn btnPrimary"
               href={DISCORD_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
+              <span className="btnIcon" aria-hidden>
+                ⬢
+              </span>
               Join Discord
             </a>
-            <a className="btnGhost" href="#code">
-              Support-A-Creator
+
+            <a className="btn btnGhost" href="#content">
+              View Content
+            </a>
+
+            <a className="btn btnSoft" href="#code">
+              Use Code EvieX
             </a>
           </div>
+
+          <div className="miniStats">
+            <div className="stat">
+              <div className="statTop">Region</div>
+              <div className="statVal">NA</div>
+            </div>
+            <div className="stat">
+              <div className="statTop">Mode</div>
+              <div className="statVal">Battle Royale</div>
+            </div>
+            <div className="stat">
+              <div className="statTop">Focus</div>
+              <div className="statVal">UEFN + Customs</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right-side feature card */}
+        <aside className="feature">
+          <div className="featureTop">
+            <div className="chip">FEATURED</div>
+            <div className="chip chipAlt">UPDATED</div>
+          </div>
+
+          <div className="featureTitle">Community Customs</div>
+          <div className="featureText">
+            Jump in when we’re live. Rules + queue in Discord.
+          </div>
+
+          <a
+            className="btn btnPrimary btnFull"
+            href={DISCORD_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open Discord
+          </a>
+
+          <div className="featureFoot">
+            <div className="dot" /> Fast join • Mobile-friendly
+          </div>
+        </aside>
+      </section>
+
+      {/* Discover Cards */}
+      <section className="grid" id="content">
+        <header className="sectionHead">
+          <h2 className="h2">Discover</h2>
+          <p className="p">Fortnite-style tiles for your main sections.</p>
+        </header>
+
+        <div className="tiles">
+          <article className="tile rarityCyan">
+            <div className="tileMedia tileMedia1" />
+            <div className="tileBody">
+              <div className="tileKicker">CONTENT</div>
+              <div className="tileTitle">Clips & Highlights</div>
+              <div className="tileText">Best moments, edits, and wins.</div>
+              <a className="tileBtn" href="#content">
+                View
+              </a>
+            </div>
+          </article>
+
+          <article className="tile rarityPurple" id="maps">
+            <div className="tileMedia tileMedia2" />
+            <div className="tileBody">
+              <div className="tileKicker">UEFN</div>
+              <div className="tileTitle">Maps & Updates</div>
+              <div className="tileText">New islands + change logs.</div>
+              <a className="tileBtn" href="#maps">
+                Explore
+              </a>
+            </div>
+          </article>
+
+          <article className="tile rarityGold">
+            <div className="tileMedia tileMedia3" />
+            <div className="tileBody">
+              <div className="tileKicker">COMMUNITY</div>
+              <div className="tileTitle">Customs Queue</div>
+              <div className="tileText">Join the server to get in.</div>
+              <a
+                className="tileBtn"
+                href={DISCORD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join
+              </a>
+            </div>
+          </article>
         </div>
       </section>
 
-      {/* Promo Cards */}
-      <section className="cards">
-        <article className="card" id="clips">
-          <div className="cardMedia cardMedia1" />
-          <div className="cardBody">
-            <h3>THE HIGHLIGHTS</h3>
-            <p>Best clips + moments. Updated often.</p>
-            <a className="btnSmall" href="#clips">View Clips</a>
+      {/* Creator Code Panel */}
+      <section className="panel" id="code">
+        <div className="panelInner">
+          <div className="panelLeft">
+            <h2 className="h2">Support-A-Creator</h2>
+            <p className="p">
+              Use code <strong>EvieX</strong> in the Fortnite Item Shop.
+            </p>
           </div>
-        </article>
 
-        <article className="card" id="uefn">
-          <div className="cardMedia cardMedia2" />
-          <div className="cardBody">
-            <h3>UEFN MAPS</h3>
-            <p>Play my newest islands + updates.</p>
-            <a className="btnSmall" href="#uefn">See Maps</a>
-          </div>
-        </article>
-
-        <article className="card" id="customs">
-          <div className="cardMedia cardMedia3" />
-          <div className="cardBody">
-            <h3>CUSTOMS</h3>
-            <p>Join the community customs when I go live.</p>
-            <a
-              className="btnSmall"
-              href={DISCORD_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+          <div className="codeBox" aria-label="Creator Code">
+            <div className="codeLabel">CREATOR CODE</div>
+            <div className="codeValue">EvieX</div>
+            <button
+              className="copyBtn"
+              onClick={() => navigator.clipboard?.writeText("EvieX")}
+              type="button"
             >
-              Get In
-            </a>
+              Copy
+            </button>
           </div>
-        </article>
-      </section>
-
-      {/* Creator Code */}
-      <section className="code" id="code">
-        <div className="codeInner">
-          <h2>Support-A-Creator</h2>
-          <p>
-            Use code <strong>EvieX</strong> in the Fortnite Item Shop 💙
-          </p>
         </div>
       </section>
 
-      <footer className="footer">© 2025 EvieX • Fortnite</footer>
+      <footer className="foot">© 2025 EvieX • Fortnite</footer>
     </main>
   );
 }
