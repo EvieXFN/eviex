@@ -1,71 +1,107 @@
+const DISCORD_URL = "https://discord.gg/ZzurZUDHPR";
+
 export default function Home() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        color: "white",
-        fontFamily: "Arial, sans-serif",
-        background:
-          "linear-gradient(135deg, #001018 0%, #0a1a2f 40%, #1a0033 100%)",
-        padding: "64px",
-        position: "relative",
-      }}
-    >
-      {/* Header */}
-      <h1
-        style={{
-          fontSize: "48px",
-          color: "#00ffff",
-          marginBottom: "8px",
-        }}
-      >
-        EvieX
-      </h1>
+    <main className="site">
+      {/* Top Nav */}
+      <header className="topbar">
+        <div className="brand">
+          <div className="brandDot" />
+          <span className="brandText">EvieX</span>
+        </div>
 
-      <p style={{ opacity: 0.8, marginBottom: "48px" }}>
-        Fortnite Creator
-      </p>
+        <nav className="nav">
+          <a href="#clips">Clips</a>
+          <a href="#customs">Customs</a>
+          <a href="#uefn">UEFN Maps</a>
+          <a href="#code">Creator Code</a>
+          <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
+            Discord
+          </a>
+        </nav>
+      </header>
 
-      <p style={{ opacity: 0.8, marginBottom: "24px" }}>
-        Clips • Customs • Content creator
-      </p>
+      {/* Hero */}
+      <section className="hero">
+        <div className="heroOverlay" />
 
-      {/* Discord Button */}
-      <a
-        href="https://discord.gg/ZzurZUDHPR"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: "inline-block",
-          padding: "14px 28px",
-          border: "2px solid #00ffff",
-          borderRadius: "10px",
-          color: "#00ffff",
-          textDecoration: "none",
-          fontWeight: "bold",
-        }}
-      >
-        Join Discord
-      </a>
+        <div className="heroInner">
+          <p className="kicker">FORTNITE CREATOR</p>
+
+          <h1 className="heroTitle">
+            Don’t take shelter.
+            <br />
+            <span className="accent">Make it.</span>
+          </h1>
+
+          <p className="heroSub">
+            Clips • Customs • UEFN Maps • Support-A-Creator
+          </p>
+
+          <div className="heroButtons">
+            <a
+              className="btnPrimary"
+              href={DISCORD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join Discord
+            </a>
+            <a className="btnGhost" href="#code">
+              Support-A-Creator
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Promo Cards */}
+      <section className="cards">
+        <article className="card" id="clips">
+          <div className="cardMedia cardMedia1" />
+          <div className="cardBody">
+            <h3>THE HIGHLIGHTS</h3>
+            <p>Best clips + moments. Updated often.</p>
+            <a className="btnSmall" href="#clips">View Clips</a>
+          </div>
+        </article>
+
+        <article className="card" id="uefn">
+          <div className="cardMedia cardMedia2" />
+          <div className="cardBody">
+            <h3>UEFN MAPS</h3>
+            <p>Play my newest islands + updates.</p>
+            <a className="btnSmall" href="#uefn">See Maps</a>
+          </div>
+        </article>
+
+        <article className="card" id="customs">
+          <div className="cardMedia cardMedia3" />
+          <div className="cardBody">
+            <h3>CUSTOMS</h3>
+            <p>Join the community customs when I go live.</p>
+            <a
+              className="btnSmall"
+              href={DISCORD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get In
+            </a>
+          </div>
+        </article>
+      </section>
 
       {/* Creator Code */}
-      <div style={{ marginTop: "40px" }}>
-        <h3 style={{ color: "#00ffff" }}>Support-A-Creator</h3>
-        <p>Use code <strong>EvieX</strong></p>
-      </div>
+      <section className="code" id="code">
+        <div className="codeInner">
+          <h2>Support-A-Creator</h2>
+          <p>
+            Use code <strong>EvieX</strong> in the Fortnite Item Shop 💙
+          </p>
+        </div>
+      </section>
 
-      {/* Footer */}
-      <footer
-        style={{
-          position: "absolute",
-          bottom: "16px",
-          left: "64px",
-          opacity: 0.6,
-          fontSize: "14px",
-        }}
-      >
-        © 2025 EvieX 
-      </footer>
+      <footer className="footer">© 2025 EvieX • Fortnite</footer>
     </main>
   );
 }
