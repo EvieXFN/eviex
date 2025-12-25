@@ -3,117 +3,93 @@ export default function Home() {
     <main
       style={{
         minHeight: "100vh",
-        background:
-          "radial-gradient(circle at top, #1a1a2e 0%, #050510 40%, #000 80%)",
-        color: "#ffffff",
-        padding: "60px",
+        color: "white",
         fontFamily: "Arial, sans-serif",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* Fortnite-style glow layer */}
+      {/* Background Video */}
+      <div style={{ position: "fixed", inset: 0, zIndex: -2 }}>
+        <iframe
+          src="https://www.youtube.com/embed/Uqcl4ZkJ594?autoplay=1&mute=1&loop=1&playlist=Uqcl4ZkJ594&controls=0&showinfo=0&modestbranding=1"
+          title="EvieX Background"
+          frameBorder="0"
+          allow="autoplay; fullscreen"
+          style={{
+            width: "100%",
+            height: "100%",
+            pointerEvents: "none",
+          }}
+        />
+      </div>
+
+      {/* Dark Overlay */}
       <div
         style={{
-          position: "absolute",
+          position: "fixed",
           inset: 0,
-          background:
-            "radial-gradient(circle at 20% 20%, rgba(0,246,255,0.15), transparent 40%), radial-gradient(circle at 80% 30%, rgba(140,0,255,0.15), transparent 40%)",
-          pointerEvents: "none",
+          background: "rgba(0,0,0,0.65)",
+          zIndex: -1,
         }}
       />
 
       {/* Content */}
-      <div style={{ position: "relative", zIndex: 1 }}>
-        {/* Header */}
-        <div>
-          <h1
-            style={{
-              color: "#00f6ff",
-              fontSize: "32px",
-              fontWeight: "900",
-              marginBottom: "6px",
-              textShadow: "0 0 14px rgba(0,246,255,0.8)",
-            }}
-          >
-            EvieX
-          </h1>
-
-          <p style={{ color: "#bdbdbd", fontSize: "14px" }}>
-            Fortnite Creator
-          </p>
-        </div>
-
-        {/* Main Title */}
-        <h2
+      <section style={{ padding: "64px" }}>
+        <h1
           style={{
-            marginTop: "80px",
-            fontSize: "56px",
-            fontWeight: "900",
-            letterSpacing: "1px",
-            textShadow: "0 0 18px rgba(255,255,255,0.2)",
+            fontSize: "48px",
+            color: "#00ffff",
+            marginBottom: "8px",
           }}
         >
           EvieX
+        </h1>
+
+        <p style={{ opacity: 0.8, marginBottom: "40px" }}>
+          Fortnite Creator
+        </p>
+
+        <h2 style={{ fontSize: "56px", marginBottom: "16px" }}>
+          EvieX
         </h2>
 
-        <p
-          style={{
-            marginTop: "12px",
-            color: "#d0d0ff",
-            fontSize: "16px",
-          }}
-        >
+        <p style={{ opacity: 0.8, marginBottom: "24px" }}>
           Clips • Customs • UEFN Maps • Creator Code
         </p>
 
-        {/* Discord Button */}
         <a
           href="https://discord.gg/ZzurZUDHPR"
           target="_blank"
           rel="noopener noreferrer"
           style={{
             display: "inline-block",
-            marginTop: "30px",
-            padding: "14px 30px",
-            borderRadius: "12px",
-            border: "2px solid #00f6ff",
-            color: "#00f6ff",
+            padding: "14px 28px",
+            border: "2px solid #00ffff",
+            borderRadius: "10px",
+            color: "#00ffff",
             textDecoration: "none",
-            fontWeight: "800",
-            boxShadow:
-              "0 0 20px rgba(0,246,255,0.6), inset 0 0 10px rgba(0,246,255,0.3)",
+            fontWeight: "bold",
+            marginBottom: "32px",
           }}
         >
           Join Discord
         </a>
 
-        {/* Support A Creator */}
-        <div style={{ marginTop: "60px" }}>
-          <p
-            style={{
-              color: "#00f6ff",
-              fontWeight: "700",
-              marginBottom: "6px",
-            }}
-          >
-            Support-A-Creator
-          </p>
-
-          <p style={{ fontSize: "20px" }}>
-            Use code <strong>EvieX</strong>
-          </p>
+        <div style={{ marginTop: "40px" }}>
+          <h3 style={{ color: "#00ffff" }}>Support-A-Creator</h3>
+          <p>Use code <strong>EvieX</strong></p>
         </div>
-      </div>
+      </section>
 
       {/* Footer */}
       <footer
         style={{
           position: "absolute",
-          bottom: "20px",
-          left: "60px",
-          color: "#777",
-          fontSize: "12px",
+          bottom: "16px",
+          left: "64px",
+          opacity: 0.6,
+          fontSize: "14px",
         }}
       >
         © 2025 EvieX • Fortnite
