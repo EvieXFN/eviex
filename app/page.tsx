@@ -27,13 +27,7 @@ export default function Home() {
 
         <div className="heroInner">
           <p className="kicker">FORTNITE CREATOR</p>
-
-          <h1 className="heroTitle">
-            Don’t take shelter.
-            <br />
-            <span className="accent">Make it.</span>
-          </h1>
-
+  
           <p className="heroSub">
             Clips • Customs • UEFN Maps • Support-A-Creator
           </p>
