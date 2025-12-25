@@ -28,20 +28,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Island Codes */}
-      <section style={styles.section}>
-        <h2 style={styles.sectionTitle}>ISLAND CODES</h2>
-        <div style={styles.card}>
-          🏝 Beach 1v1 — <strong>0000-0000-0000</strong>
-        </div>
-        <div style={styles.card}>
-          📦 Box Fights — <strong>0000-0000-0000</strong>
-        </div>
-        <div style={styles.card}>
-          🌪 Zone Wars — <strong>0000-0000-0000</strong>
-        </div>
-      </section>
-
+     
       {/* Creator Code */}
       <section style={styles.section}>
         <h2 style={styles.sectionTitle}>CREATOR CODE</h2>
