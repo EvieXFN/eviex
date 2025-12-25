@@ -1,3 +1,5 @@
+import CopyButton from "./CopyButton";
+
 const DISCORD_URL = "https://discord.gg/ZzurZUDHPR";
 
 export default function Home() {
@@ -42,7 +44,7 @@ export default function Home() {
           </div>
 
           <h1 className="title">
-            EVieX <span className="titleAccent">HUB</span>
+            EVieX <span className="titleAccent">HQ</span>
           </h1>
 
           <p className="subtitle">
@@ -56,9 +58,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="btnIcon" aria-hidden>
-                ⬢
-              </span>
+              <span className="btnIcon" aria-hidden>⬢</span>
               Join Discord
             </a>
 
@@ -96,7 +96,7 @@ export default function Home() {
 
           <div className="featureTitle">Community Customs</div>
           <div className="featureText">
-            Jump in when we’re live. Rules + queue in Discord.
+            Queue + rules live in Discord. Join to get notified.
           </div>
 
           <a
@@ -128,9 +128,7 @@ export default function Home() {
               <div className="tileKicker">CONTENT</div>
               <div className="tileTitle">Clips & Highlights</div>
               <div className="tileText">Best moments, edits, and wins.</div>
-              <a className="tileBtn" href="#content">
-                View
-              </a>
+              <a className="tileBtn" href="#content">View</a>
             </div>
           </article>
 
@@ -140,9 +138,7 @@ export default function Home() {
               <div className="tileKicker">UEFN</div>
               <div className="tileTitle">Maps & Updates</div>
               <div className="tileText">New islands + change logs.</div>
-              <a className="tileBtn" href="#maps">
-                Explore
-              </a>
+              <a className="tileBtn" href="#maps">Explore</a>
             </div>
           </article>
 
@@ -178,13 +174,7 @@ export default function Home() {
           <div className="codeBox" aria-label="Creator Code">
             <div className="codeLabel">CREATOR CODE</div>
             <div className="codeValue">EvieX</div>
-            <button
-              className="copyBtn"
-              onClick={() => navigator.clipboard?.writeText("EvieX")}
-              type="button"
-            >
-              Copy
-            </button>
+            <CopyButton />
           </div>
         </div>
       </section>
