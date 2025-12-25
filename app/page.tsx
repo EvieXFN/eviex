@@ -88,7 +88,7 @@ export default function Home() {
           fontSize: "14px",
         }}
       >
-        © 2025 EvieX • Fortnite
+        © 2025 EvieX 
       </footer>
     </main>
   );
