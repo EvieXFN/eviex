@@ -8,22 +8,6 @@ export default function Home() {
         position: "relative",
         overflow: "hidden",
       }}
-    >
-      {/* Background Video */}
-      <div style={{ position: "fixed", inset: 0, zIndex: -2 }}>
-        <iframe
-          src="https://www.youtube.com/embed/Uqcl4ZkJ594?autoplay=1&mute=1&loop=1&playlist=Uqcl4ZkJ594&controls=0&showinfo=0&modestbranding=1"
-          title="EvieX Background"
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-          style={{
-            width: "100%",
-            height: "100%",
-            pointerEvents: "none",
-          }}
-        />
-      </div>
-
       {/* Dark Overlay */}
       <div
         style={{
