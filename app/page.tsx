@@ -46,13 +46,13 @@ export default function Home() {
       <section style={styles.section}>
         <h2 style={styles.sectionTitle}>CREATOR CODE</h2>
         <div style={styles.creatorCode}>
-          USE CODE <span style={styles.neon}>EVX</span>
+          USE CODE <span style={styles.neon}>EvieX</span>
         </div>
       </section>
 
       {/* Footer */}
       <footer style={styles.footer}>
-        © {new Date().getFullYear()} EvieX • Neon Fortnite
+        © {new Date().getFullYear()} EvieX • Fortnite
       </footer>
     </main>
   );
